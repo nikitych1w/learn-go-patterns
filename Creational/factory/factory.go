@@ -52,5 +52,4 @@ func DatabaseFactory(env string) Database {
 	default:
 		return nil
 	}
-
 }

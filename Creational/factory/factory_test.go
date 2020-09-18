@@ -1,6 +1,9 @@
-package factory
+package factory_test
 
 import (
+	"fmt"
+	"github.com/nikitych1w/learn-go-patterns/Creational/factory"
+	"reflect"
 	"testing"
 )
 
@@ -10,4 +13,6 @@ func TestDatabaseFactory(t *testing.T) {
 
 	db1 := factory.DatabaseFactory(env1)
 	db2 := factory.DatabaseFactory(env2)
+
+	fmt.Println(reflect.TypeOf(db1), reflect.TypeOf(db2))
 }
