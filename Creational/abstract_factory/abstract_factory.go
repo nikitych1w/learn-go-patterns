@@ -41,7 +41,6 @@ func (mdb mongoDB) GetData(query string) string {
 	if _, ok := mdb.database[query]; !ok {
 		return ""
 	}
-
 	fmt.Println("MongoDB")
 	return mdb.database[query]
 }

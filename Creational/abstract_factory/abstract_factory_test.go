@@ -12,7 +12,7 @@ func SetupCunstruction(env string) (abstract_factory.Database, abstract_factory.
 	db := abstract_factory.AbstractFactory("database")
 
 	return db(env).(abstract_factory.Database),
-		fs.(env).(abstract_factory.FileSystem)
+		fs(env).(abstract_factory.FileSystem)
 }
 
 func TestAbstractFactory(t *testing.T) {
@@ -21,5 +21,4 @@ func TestAbstractFactory(t *testing.T) {
 
 	fmt.Println(reflect.TypeOf(fsp), reflect.TypeOf(dbp))
 	fmt.Println(reflect.TypeOf(fsd), reflect.TypeOf(dbd))
-
 }
